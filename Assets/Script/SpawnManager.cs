@@ -2,20 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[System.Serializable]
-public class SpawnData
-{
-    public int after;
-    public int potionToSpawn;
-    public float speed;
-}
-
 public class SpawnManager : MonoBehaviour {
 
     public float spawnTime;
     private float spawnTimer;
     public Transform spawnPosition;
-    public List<SpawnData> data = new List<SpawnData>();
 
     [Header("Variabili da non toccare")]
     public int PotionSpawned;

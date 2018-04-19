@@ -1,0 +1,3 @@
+-mancava il tempo di spawn tra 2 pozioni (quando poteva spawnare più di una) perciò è stato impostato a 1.5 secondi
+-non era indicato quando le pozioni spawnabili potessero diventare 3, è stato impostato solo per l'ultimo livello di difficoltà
+-per poterlo testare la tipologia del liquido è determinata dal colore che appunto viene modificato ogni volta, tecnicamente andrebbe modificato con il modello corretto
