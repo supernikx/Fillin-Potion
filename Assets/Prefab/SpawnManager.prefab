@@ -80,7 +80,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8289dde2324eb834b9391bd8669efcd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnTime: 1
+  spawnTime: 1.5
   spawnPosition: {fileID: 4823264434036076}
   data:
   - after: 10
