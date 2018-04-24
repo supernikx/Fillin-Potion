@@ -26,10 +26,10 @@ public class PoolManager : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        EventManager.OnPotionDestroy += OnPotionDestroyed;
         for (int i = 0; i < ammount; i++)
         {
             IPotion instantiatedPotion = Instantiate(potionPrefab, transform).GetComponent<IPotion>();
-            EventManager.OnPotionDestroy += OnPotionDestroyed;
             instantiatedPotion.gameObject.transform.position = poolPosition;
             instantiatedPotion.CurrentState = PotionState.inPool;
             pooledPotions.Add(instantiatedPotion);
@@ -55,9 +55,6 @@ public class PoolManager : MonoBehaviour
 
     private void OnDisable()
     {
-        foreach (IPotion potion in pooledPotions)
-        {
-            EventManager.OnPotionDestroy -= OnPotionDestroyed;
-        }
+        EventManager.OnPotionDestroy -= OnPotionDestroyed;
     }
 }
