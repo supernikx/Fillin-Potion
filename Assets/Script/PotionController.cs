@@ -63,6 +63,12 @@ public class PotionController : MonoBehaviour, IPotion
     public bool refill;
     public bool wrong;
 
+    public Material QMaterial;
+    public Material RMaterial;
+    public Material UMaterial;
+    public Material PMaterial;
+
+
     MeshRenderer mr;
     bool gameover;
 
@@ -70,7 +76,7 @@ public class PotionController : MonoBehaviour, IPotion
     void Start()
     {
         refill = false;
-        mr = GetComponent<MeshRenderer>();
+        mr = GetComponentInChildren<MeshRenderer>();
         EventManager.GameOver += GameOver;
     }
 
@@ -161,16 +167,16 @@ public class PotionController : MonoBehaviour, IPotion
         switch (CurrentType)
         {
             case PotionTypes.Q:
-                mr.material.color = Color.red;
+                mr.material = QMaterial;
                 break;
             case PotionTypes.R:
-                mr.material.color = Color.green;
+                mr.material = RMaterial;
                 break;
             case PotionTypes.U:
-                mr.material.color = Color.yellow;
+                mr.material = UMaterial;
                 break;
             case PotionTypes.P:
-                mr.material.color = Color.blue;
+                mr.material = PMaterial;
                 break;
             default:
                 break;

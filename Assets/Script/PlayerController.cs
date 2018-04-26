@@ -48,17 +48,15 @@ public class PlayerController : MonoBehaviour
         {
             if (keypressed == potion.CurrentType && keypressed == potion.RefillerZone && potion.InRefillerZone && !potion.isRefilled() && !potion.isWrong())
             {
-                Debug.Log("grande zio");
                 potion.Refill();
             }
             else if (keypressed != potion.CurrentType && keypressed == potion.RefillerZone && potion.InRefillerZone && !potion.isRefilled() && !potion.isWrong())
             {
-                Debug.Log("Fai cagare");
                 potion.WrongLiquid();
             }
             else
             {
-                Debug.Log("non hai fatto nulla");
+                StartCoroutine(ui.WrongKeyText());
             }
         }
     }

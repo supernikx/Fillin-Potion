@@ -3,12 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class UIManager : MonoBehaviour {
 
-    public Text score;
+    public TextMeshProUGUI  score;
     public GameObject gameoverPanell;
-    public Text scoreGameOverScreen;
+    public TextMeshProUGUI scoreGameOverScreen;
+    public TextMeshProUGUI wrongKeyText;
+
+
     int scoreTemp;
 
     private void Start()
@@ -31,5 +35,12 @@ public class UIManager : MonoBehaviour {
     public void Restart()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    public IEnumerator WrongKeyText()
+    {
+        wrongKeyText.gameObject.SetActive(true);
+        yield return new WaitForSeconds(1f);
+        wrongKeyText.gameObject.SetActive(false);
     }
 }

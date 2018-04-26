@@ -82,19 +82,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnTime: 1.5
   spawnPosition: {fileID: 4823264434036076}
-  data:
-  - after: 10
-    potionToSpawn: 2
-    speed: 0.05
-  - after: 0
-    potionToSpawn: 0
-    speed: 0
-  - after: 0
-    potionToSpawn: 0
-    speed: 0
-  - after: 0
-    potionToSpawn: 0
-    speed: 0
   PotionSpawned: 0
   maxPotionSpawn: 0
   inGamePotions: 0
