@@ -67,6 +67,8 @@ public class PotionController : MonoBehaviour, IPotion
     public Material RMaterial;
     public Material UMaterial;
     public Material PMaterial;
+    public Material CorrectPotionMaterial;
+    public Material WrongPotionMaterial;
 
 
     MeshRenderer mr;
@@ -137,7 +139,7 @@ public class PotionController : MonoBehaviour, IPotion
     public void Refill()
     {
         refill = true;
-        mr.material.color = Color.white;
+        mr.material = CorrectPotionMaterial;
     }
 
     public bool isRefilled()
@@ -147,7 +149,7 @@ public class PotionController : MonoBehaviour, IPotion
 
     public void WrongLiquid()
     {
-        mr.material.color = Color.black;
+        mr.material = WrongPotionMaterial;
         wrong = true;
     }
 

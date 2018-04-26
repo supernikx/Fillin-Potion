@@ -56,7 +56,7 @@ public class PlayerController : MonoBehaviour
             }
             else
             {
-                StartCoroutine(ui.WrongKeyText());
+                ui.WrongKeyText();
             }
         }
     }

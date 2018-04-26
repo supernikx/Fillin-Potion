@@ -151,6 +151,9 @@ MonoBehaviour:
   RMaterial: {fileID: 2100000, guid: e231edcba1fad85468b194dd2fe8bb14, type: 2}
   UMaterial: {fileID: 2100000, guid: 83eb27550540d4b4bb485d4cdbcd3717, type: 2}
   PMaterial: {fileID: 2100000, guid: 20318eee05be50b4c81c6e2ef1cd5c12, type: 2}
+  CorrectPotionMaterial: {fileID: 2100000, guid: 5753eb66ba79c9047826985522a4a021,
+    type: 2}
+  WrongPotionMaterial: {fileID: 2100000, guid: 172a4089cc260bf43b8526bd86d934b5, type: 2}
 --- !u!136 &136906055397056776
 CapsuleCollider:
   m_ObjectHideFlags: 1

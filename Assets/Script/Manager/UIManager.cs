@@ -37,10 +37,21 @@ public class UIManager : MonoBehaviour {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
-    public IEnumerator WrongKeyText()
+    bool isRunning;
+    public void WrongKeyText()
+    {
+        if (!isRunning)
+        {
+            isRunning = true;
+            StartCoroutine(WrongKeyCoroutine());
+        }
+    }
+
+    IEnumerator WrongKeyCoroutine()
     {
         wrongKeyText.gameObject.SetActive(true);
         yield return new WaitForSeconds(1f);
         wrongKeyText.gameObject.SetActive(false);
+        isRunning = false;
     }
 }
