@@ -29,7 +29,7 @@ public class UIManager : MonoBehaviour {
     public void ScoreUpdate(int _score)
     {
         scoreTemp = _score;
-        score.text = scoreTemp.ToString();      
+        score.text = "SCORE: "+scoreTemp.ToString();      
     }
 
     public void Restart()
